@@ -83,41 +83,12 @@ const artworks = [
   },
   {
     id: 3,
-    title: "Eucalyptus Dream",
-    animal: "Koala",
-    scientific: "Phascolarctos cinereus",
+    title: "Slow & Steady",
+    animal: "Three-toed Sloth",
+    scientific: "Bradypus tridactylus",
     category: "Herbivore",
-    habitat: "Eucalyptus forests and woodlands of eastern and southeastern Australia. Koalas spend up to 22 hours a day resting to conserve energy from their low-nutrient leaf diet.",
-    notes: "The koala was about softness — those rounded ears, the fluffy grey body, the sleepy eyes. I wanted it to feel gentle and still, perched quietly in its eucalyptus tree.",
-    svg: `<svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg">
-      <rect width="600" height="450" fill="#0a1a10"/>
-      <circle cx="100" cy="70" r="2" fill="#fff" opacity="0.6"/>
-      <circle cx="250" cy="45" r="1.5" fill="#fff" opacity="0.5"/>
-      <circle cx="400" cy="60" r="1.5" fill="#fff" opacity="0.7"/>
-      <circle cx="530" cy="40" r="1" fill="#fff" opacity="0.4"/>
-      <rect x="260" y="80" width="18" height="370" fill="#5a3a18"/>
-      <rect x="270" y="80" width="10" height="370" fill="#6a4a22"/>
-      <ellipse cx="260" cy="200" rx="60" ry="8" fill="#3a6a28" transform="rotate(-30,260,200)"/>
-      <ellipse cx="310" cy="280" rx="55" ry="7" fill="#2a5a1e" transform="rotate(25,310,280)"/>
-      <ellipse cx="230" cy="320" rx="50" ry="7" fill="#3a6a28" transform="rotate(-20,230,320)"/>
-      <ellipse cx="320" cy="290" rx="90" ry="70" fill="#8a8a9a"/>
-      <ellipse cx="320" cy="255" rx="52" ry="58" fill="#9a9aaa"/>
-      <ellipse cx="320" cy="242" rx="38" ry="38" fill="#8a8a9a"/>
-      <ellipse cx="300" cy="232" rx="18" ry="18" fill="#aaaabc"/>
-      <ellipse cx="340" cy="232" rx="18" ry="18" fill="#aaaabc"/>
-      <ellipse cx="300" cy="232" rx="10" ry="11" fill="#2a2a3a"/>
-      <ellipse cx="340" cy="232" rx="10" ry="11" fill="#2a2a3a"/>
-      <circle cx="298" cy="230" r="4" fill="#0a0a18" opacity="0.8"/>
-      <circle cx="338" cy="230" r="4" fill="#0a0a18" opacity="0.8"/>
-      <circle cx="296" cy="228" r="2" fill="#fff" opacity="0.7"/>
-      <circle cx="336" cy="228" r="2" fill="#fff" opacity="0.7"/>
-      <ellipse cx="320" cy="252" rx="20" ry="12" fill="#6a6a7a"/>
-      <ellipse cx="320" cy="252" rx="12" ry="7" fill="#4a3a3a"/>
-      <ellipse cx="285" cy="208" rx="16" ry="20" fill="#9a9aaa"/>
-      <ellipse cx="355" cy="208" rx="16" ry="20" fill="#9a9aaa"/>
-      <path d="M270 300 Q240 295 235 320 Q232 340 260 330" fill="#8a8a9a"/>
-      <path d="M370 300 Q400 295 405 320 Q408 340 380 330" fill="#8a8a9a"/>
-      <text x="300" y="435" text-anchor="middle" font-family="serif" font-size="11" fill="#888" letter-spacing="2">PLACEHOLDER — KOALA ILLUSTRATION COMING SOON</text>
-    </svg>`
+    habitat: "Tropical rainforests of Central and South America. Sloths spend almost their entire lives hanging upside down in the tree canopy, moving so slowly that algae grows on their fur.",
+    notes: "The sloth's happy expression while hanging upside down was what I wanted to capture — completely at peace, totally unbothered. The fur texture and long claws were the most enjoyable parts to illustrate.",
+    svg: `<img src="images/sloth.png" alt="Sloth illustration" style="width:100%;height:100%;object-fit:cover;display:block;"/>`
   }
 ];
