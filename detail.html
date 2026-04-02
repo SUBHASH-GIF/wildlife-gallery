@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wildlife Gallery — Artwork Detail</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">WILDLIFE GALLERY</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+          <div class="theme-toggle-track"><div class="theme-toggle-thumb"></div></div>
+          <span class="theme-toggle-label">Mode</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div class="detail-header">
+      <div class="breadcrumb">
+        <a href="gallery.html">Gallery</a>
+        <span>›</span>
+        <span id="breadcrumb-title">Artwork</span>
+      </div>
+    </div>
+
+    <div class="artwork-detail">
+
+      <div>
+        <div class="artwork-full-img" id="detail-image"></div>
+      </div>
+
+      <div>
+        <div class="artwork-title-block">
+          <div class="artwork-eyebrow" id="detail-category">Wildlife</div>
+          <h1 class="artwork-main-title" id="detail-title">—</h1>
+        </div>
+
+        <div class="artwork-facts">
+          <div class="fact-row">
+            <span class="fact-label">Animal</span>
+            <span class="fact-value"><strong id="detail-animal">—</strong></span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Scientific Name</span>
+            <span class="fact-value" id="detail-scientific">—</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Habitat</span>
+            <span class="fact-value" id="detail-habitat">—</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Artist's Notes</span>
+            <span class="fact-value" id="detail-notes">—</span>
+          </div>
+        </div>
+
+        <div class="artwork-nav">
+          <button class="btn-outline" id="btn-prev">← Previous</button>
+          <button class="btn-outline" id="btn-next">Next →</button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <span class="footer-copy">© 2024 Wildlife Gallery — Venkata Subhash Cherukuri</span>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="js/artworks.js"></script>
+  <script>
+    (function(){var s=localStorage.getItem('wg-theme')||'dark';document.documentElement.setAttribute('data-theme',s);})();
+    document.addEventListener('DOMContentLoaded',function(){
+      var btn=document.getElementById('theme-toggle');
+      if(btn) btn.addEventListener('click',function(){
+        var c=document.documentElement.getAttribute('data-theme');
+        var n=c==='dark'?'light':'dark';
+        document.documentElement.setAttribute('data-theme',n);
+        localStorage.setItem('wg-theme',n);
+      });
+
+      function getParam(name){return new URLSearchParams(window.location.search).get(name);}
+      var currentId=parseInt(getParam('id'))||0;
+
+      function loadArtwork(id){
+        id=(id+artworks.length)%artworks.length;
+        currentId=id;
+        var art=artworks[id];
+        document.title='Wildlife Gallery — '+art.title;
+        document.getElementById('breadcrumb-title').textContent=art.title;
+        document.getElementById('detail-category').textContent=art.category;
+        document.getElementById('detail-title').textContent=art.title;
+        document.getElementById('detail-animal').textContent=art.animal;
+        document.getElementById('detail-scientific').textContent=art.scientific;
+        document.getElementById('detail-habitat').textContent=art.habitat;
+        document.getElementById('detail-notes').textContent=art.notes;
+        document.getElementById('detail-image').innerHTML=art.svg+'<div class="img-caption">'+art.title+' — '+art.animal+'</div>';
+        history.replaceState(null,'','detail.html?id='+id);
+      }
+
+      document.getElementById('btn-prev').addEventListener('click',function(){loadArtwork(currentId-1);});
+      document.getElementById('btn-next').addEventListener('click',function(){loadArtwork(currentId+1);});
+      loadArtwork(currentId);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wildlife Gallery — Home</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">WILDLIFE GALLERY</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+          <div class="theme-toggle-track">
+            <div class="theme-toggle-thumb"></div>
+          </div>
+          <span class="theme-toggle-label">Mode</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Wildlife Through Art</div>
+        <h1 class="hero-title">Wildlife<br><em>Gallery</em></h1>
+        <p class="hero-subtitle">
+          A curated digital collection of original animal illustrations
+          created to raise awareness for endangered species and wildlife conservation.
+        </p>
+        <a href="gallery.html" class="btn-primary">View Gallery</a>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg">
+            <rect width="600" height="450" fill="#0e1a0f"/>
+            <polygon points="0,280 80,210 160,240 240,185 320,220 400,170 480,210 560,180 600,200 600,280" fill="#1a2e1b"/>
+            <polygon points="0,300 60,250 140,270 220,230 300,260 380,215 460,248 540,218 600,238 600,300" fill="#2d4a2e"/>
+            <path d="M0 320 Q150 305 300 315 Q450 330 600 312 L600 450 L0 450Z" fill="#1a2e1b"/>
+            <circle cx="480" cy="80" r="30" fill="#4a7c3f" opacity="0.2"/>
+            <ellipse cx="480" cy="80" rx="70" ry="55" fill="#3a6230" opacity="0.1"/>
+            <!-- Raccoon silhouette -->
+            <g opacity="0.9">
+              <ellipse cx="280" cy="298" rx="44" ry="24" fill="#0e1a0f"/>
+              <ellipse cx="280" cy="280" rx="22" ry="20" fill="#0e1a0f"/>
+              <!-- ears -->
+              <ellipse cx="268" cy="262" rx="7" ry="9" fill="#0e1a0f"/>
+              <ellipse cx="292" cy="262" rx="7" ry="9" fill="#0e1a0f"/>
+              <!-- legs -->
+              <rect x="250" y="313" width="6" height="18" rx="3" fill="#0e1a0f"/>
+              <rect x="263" y="315" width="6" height="16" rx="3" fill="#0e1a0f"/>
+              <rect x="291" y="315" width="6" height="16" rx="3" fill="#0e1a0f"/>
+              <rect x="304" y="313" width="6" height="18" rx="3" fill="#0e1a0f"/>
+              <!-- tail -->
+              <path d="M236 298 Q210 288 202 298" stroke="#0e1a0f" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <!-- eye -->
+              <circle cx="287" cy="276" r="3" fill="#6aaa5a"/>
+            </g>
+            <!-- fireflies / particles -->
+            <circle cx="100" cy="220" r="1.5" fill="#6aaa5a" opacity="0.5"/>
+            <circle cx="200" cy="180" r="1"   fill="#4a7c3f" opacity="0.4"/>
+            <circle cx="450" cy="160" r="2"   fill="#6aaa5a" opacity="0.3"/>
+            <circle cx="350" cy="200" r="1.5" fill="#4a7c3f" opacity="0.4"/>
+          </svg>
+          <div class="img-caption">Featured: Raccoon — Procyon lotor</div>
+        </div>
+        <div class="hero-stats">
+          <span class="num">4</span>
+          <span class="label">Original Artworks</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED ARTWORKS -->
+    <section class="featured">
+      <div class="section-header">
+        <span class="section-title">Recent Artworks</span>
+        <a class="section-link" href="gallery.html">View All →</a>
+      </div>
+      <div class="artworks-row" id="featured-row"></div>
+    </section>
+
+    <!-- ABOUT TEASER -->
+    <section class="about-teaser">
+      <div>
+        <h2 class="about-title">About Wildlife<br>Gallery</h2>
+        <p class="about-text">
+          A digital gallery of original wildlife illustrations created to connect
+          people with endangered animals through art and visual storytelling.
+        </p>
+      </div>
+      <div class="about-teaser-divider"></div>
+      <div>
+        <p class="about-text" style="margin-bottom:24px;">
+          Each illustration is hand-crafted in Adobe Illustrator and Photoshop,
+          paired with conservation information to educate and inspire action.
+        </p>
+        <a href="contact.html" class="btn-outline">Get in Touch →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="footer-copy">© 2024 Wildlife Gallery — Venkata Subhash Cherukuri</span>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="js/artworks.js"></script>
+  <script>
+    (function(){var s=localStorage.getItem('wg-theme')||'dark';document.documentElement.setAttribute('data-theme',s);})();
+    document.addEventListener('DOMContentLoaded', function(){
+      var btn=document.getElementById('theme-toggle');
+      if(btn) btn.addEventListener('click',function(){
+        var c=document.documentElement.getAttribute('data-theme');
+        var n=c==='dark'?'light':'dark';
+        document.documentElement.setAttribute('data-theme',n);
+        localStorage.setItem('wg-theme',n);
+      });
+      var row=document.getElementById('featured-row');
+      artworks.slice(0,3).forEach(function(art){
+        row.innerHTML+=`<a class="artwork-card" href="detail.html?id=${art.id}">${art.svg}<div class="artwork-card-info"><span class="artwork-card-title">${art.title}</span><span class="artwork-card-animal">${art.animal}</span></div></a>`;
+      });
+    });
+  </script>
+
+</body>
+</html>

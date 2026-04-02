@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wildlife Gallery — About</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">WILDLIFE GALLERY</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+          <div class="theme-toggle-track"><div class="theme-toggle-thumb"></div></div>
+          <span class="theme-toggle-label">Mode</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="about-page">
+      <div class="about-inner">
+
+        <div class="hero-eyebrow">Our Mission</div>
+        <h1 class="hero-title" style="font-size: clamp(36px, 5vw, 52px); margin-bottom: 32px;">
+          About <em>Wildlife Gallery</em>
+        </h1>
+
+        <p class="about-lead">
+          Wildlife Gallery is a digital art space dedicated to raising awareness
+          about endangered and at-risk animal species through original illustration
+          and visual storytelling.
+        </p>
+
+        <p class="about-body">
+          Each artwork in the collection is accompanied by the animal's conservation status
+          and a short description — making complex ecological topics approachable and
+          emotionally engaging for everyone.
+        </p>
+
+        <p class="about-body">
+          This project was created as part of the DGL 104 Application Development program
+          at North Island College. It represents the intersection of art, design, and
+          environmental awareness — a portfolio piece built with care and purpose.
+        </p>
+
+        <div class="about-stats">
+          <div class="stat-box">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Artworks</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Species</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Artist</span>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn-primary">Get in Touch</a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-copy">© 2024 Wildlife Gallery — Venkata Subhash Cherukuri</span>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    (function(){var s=localStorage.getItem('wg-theme')||'dark';document.documentElement.setAttribute('data-theme',s);})();
+    document.addEventListener('DOMContentLoaded',function(){
+      var btn=document.getElementById('theme-toggle');
+      if(btn) btn.addEventListener('click',function(){
+        var c=document.documentElement.getAttribute('data-theme');
+        var n=c==='dark'?'light':'dark';
+        document.documentElement.setAttribute('data-theme',n);
+        localStorage.setItem('wg-theme',n);
+      });
+    });
+  </script>
+
+</body>
+</html>

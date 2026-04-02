@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wildlife Gallery — Gallery</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">WILDLIFE GALLERY</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+          <div class="theme-toggle-track"><div class="theme-toggle-thumb"></div></div>
+          <span class="theme-toggle-label">Mode</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div class="gallery-header">
+      <h1 class="page-title">Gallery</h1>
+      <div class="page-divider"></div>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid"></div>
+
+  </main>
+
+  <footer>
+    <span class="footer-copy">© 2024 Wildlife Gallery — Venkata Subhash Cherukuri</span>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="js/artworks.js"></script>
+  <script>
+    (function(){var s=localStorage.getItem('wg-theme')||'dark';document.documentElement.setAttribute('data-theme',s);})();
+    document.addEventListener('DOMContentLoaded', function(){
+      var btn=document.getElementById('theme-toggle');
+      if(btn) btn.addEventListener('click',function(){
+        var c=document.documentElement.getAttribute('data-theme');
+        var n=c==='dark'?'light':'dark';
+        document.documentElement.setAttribute('data-theme',n);
+        localStorage.setItem('wg-theme',n);
+      });
+      var grid=document.getElementById('gallery-grid');
+      artworks.forEach(function(art){
+        grid.innerHTML+=`<a class="gallery-item" href="detail.html?id=${art.id}"><div class="gallery-item-img">${art.svg}</div><div class="gallery-item-info"><div class="gallery-item-title">${art.title}</div><div class="gallery-item-animal">${art.animal}</div></div></a>`;
+      });
+    });
+  </script>
+
+</body>
+</html>
