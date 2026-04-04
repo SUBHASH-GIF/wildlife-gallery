@@ -14,7 +14,7 @@
   --sand:         #aaaaaa;
   --sand-light:   #dddddd;
   --text:         #cccccc;
-  --text-muted:   #666666;
+  --text-muted:   #999999;
   --white:        #ffffff;
   --font-display: 'Cinzel', serif;
   --font-body:    'Cormorant Garamond', serif;
@@ -90,8 +90,8 @@ nav {
 .nav-links a {
   font-family: var(--font-ui);
   font-weight: 300;
-  font-size: 12px;
-  letter-spacing: 0.18em;
+  font-size: 14px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #aaaaaa;
   text-decoration: none;
@@ -173,8 +173,8 @@ nav {
 
 .theme-toggle-label {
   font-family: var(--font-ui);
-  font-size: 10px;
-  letter-spacing: 0.15em;
+  font-size: 13px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
@@ -193,8 +193,8 @@ footer {
 
 .footer-copy {
   font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-size: 14px;
+  letter-spacing: 0.08em;
   color: #999999;
 }
 
@@ -202,8 +202,8 @@ footer {
 
 .footer-social a {
   font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-size: 14px;
+  letter-spacing: 0.08em;
   color: #999999;
   text-decoration: none;
   transition: color 0.3s;
@@ -220,9 +220,9 @@ footer {
   background: var(--green);
   color: var(--bg);
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
   border: none;
@@ -244,8 +244,8 @@ footer {
   border: 1px solid var(--border);
   color: var(--text-muted);
   font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 0.15em;
+  font-size: 13px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
   transition: border-color 0.3s, color 0.3s;
@@ -269,17 +269,17 @@ footer {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #999999;
 }
 
 .section-link {
   font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 0.15em;
+  font-size: 13px;
+  letter-spacing: 0.1em;
   color: var(--green);
   text-decoration: none;
   text-transform: uppercase;
@@ -329,8 +329,8 @@ main {
 
 .hero-eyebrow {
   font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 0.3em;
+  font-size: 13px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--green);
   margin-bottom: 24px;
@@ -386,9 +386,9 @@ main {
   padding: 12px 16px;
   background: linear-gradient(transparent, rgba(0,0,0,0.6));
   font-family: var(--font-ui);
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  color: var(--sand);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #dddddd;
   text-transform: uppercase;
 }
 
@@ -415,9 +415,9 @@ main {
 
 .hero-stats .label {
   font-family: var(--font-ui);
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.85);
   text-transform: uppercase;
 }
 
@@ -485,9 +485,9 @@ main {
 
 .artwork-card-animal {
   font-family: var(--font-ui);
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  color: var(--green-light);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #dddddd;
   text-transform: uppercase;
 }
 
@@ -579,8 +579,8 @@ main {
 
 .gallery-item-animal {
   font-family: var(--font-ui);
-  font-size: 10px;
-  letter-spacing: 0.12em;
+  font-size: 13px;
+  letter-spacing: 0.08em;
   color: #aaaaaa;
   text-transform: uppercase;
 }
@@ -598,9 +598,9 @@ main {
   align-items: center;
   gap: 10px;
   font-family: var(--font-ui);
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  color: var(--text-muted);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #aaaaaa;
   text-transform: uppercase;
 }
 
@@ -635,8 +635,8 @@ main {
 
 .artwork-eyebrow {
   font-family: var(--font-ui);
-  font-size: 10px;
-  letter-spacing: 0.25em;
+  font-size: 13px;
+  letter-spacing: 0.15em;
   color: var(--green);
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -662,9 +662,9 @@ main {
 
 .fact-label {
   font-family: var(--font-ui);
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: #999999;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #aaaaaa;
   text-transform: uppercase;
   padding-top: 2px;
 }
@@ -731,8 +731,8 @@ main {
 
 .stat-label {
   font-family: var(--font-ui);
-  font-size: 10px;
-  letter-spacing: 0.2em;
+  font-size: 13px;
+  letter-spacing: 0.15em;
   color: var(--text-muted);
   text-transform: uppercase;
 }
@@ -755,8 +755,8 @@ main {
 .form-label {
   display: block;
   font-family: var(--font-ui);
-  font-size: 10px;
-  letter-spacing: 0.2em;
+  font-size: 13px;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 8px;
@@ -802,8 +802,8 @@ main {
 
 .contact-detail-label {
   font-family: var(--font-ui);
-  font-size: 9px;
-  letter-spacing: 0.2em;
+  font-size: 13px;
+  letter-spacing: 0.15em;
   color: var(--green);
   text-transform: uppercase;
   margin-bottom: 6px;
@@ -821,8 +821,8 @@ main {
   color: var(--green);
   text-decoration: none;
   font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 0.1em;
+  font-size: 14px;
+  letter-spacing: 0.08em;
   transition: color 0.3s;
 }
 
@@ -835,7 +835,7 @@ main {
   border: 1px solid var(--green-dim);
   color: var(--green-light);
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.1em;
   margin-top: 16px;
 }
